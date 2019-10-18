@@ -12,6 +12,6 @@ int main()
       {
           result = result * i;
       }
-         std::cout << result << std::endl;
+         std::cout << "Factorial is: " << n << "! " << result << std::endl;
 }
      
