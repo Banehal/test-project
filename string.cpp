@@ -7,7 +7,6 @@
 //  'mix', pod' -> 'pox mid'
 //  'dog', 'dinner' -> 'dig donner'
 // Assume a and b are length 2 or more.
-
  int main()
  {
     std::string wordOne;
@@ -19,12 +18,19 @@
     std::cin >> wordTwo;
 
     std::string wordThree{wordOne};
-    wordOne[0] = wordTwo[0];
-    wordOne[1] = wordTwo[1];
-    wordTwo[0] = wordThree[0];
-    wordTwo[1] = wordThree[1];
 
-    std::cout << wordOne << " " << wordTwo << std::endl;
+    for ( int i=0; i<=1; ++i)
+    {
+       wordOne[i] = wordTwo[i];
+       wordTwo[i] = wordThree[i];
+    }
+    
+ //   wordOne[0] = wordTwo[0];
+ //   wordOne[1] = wordTwo[1];
+ //   wordTwo[0] = wordThree[0];
+ //   wordTwo[1] = wordThree[1];
+
+   std::cout << wordOne << " " << wordTwo << std::endl;
    // char firstChar = wordOne[0];
  //   int wordLength = wordOne.length();
   //  for (int i=1; i< wordOne.length(); ++i)
