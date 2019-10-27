@@ -17,10 +17,14 @@
     std::cout << "Enter first word:" << std::endl;
     std::cin >> wordOne;
 
- //   char firstChar = wordOne[0];
+    char firstChar = wordOne[0];
  //   int wordLength = wordOne.length();
     for (int i=0; i< wordOne.length(); ++i)
     {
+       if ( wordOne[i] == firstChar )
+       {
+          wordOne[i] = '*';
+       }
        std::cout << wordOne[i];// << std::endl;
     } 
        std::cout << std::endl;
