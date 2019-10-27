@@ -8,10 +8,14 @@
 //  'dog', 'dinner' -> 'dig donner'
 // Assume a and b are length 2 or more.
 
- const int quantityOfSwappedChars{2};
+// const int quantityOfSwappedChars{2};
 
  int main()
  {
+    int quantityOfSwappedChars;
+    std::cout<< "Enter quanity of swapped chars" << std::endl;
+    std::cin >> quantityOfSwappedChars;
+    
     std::string wordOne;
     std::cout << "Enter first word:" << std::endl;
     std::cin >> wordOne;
