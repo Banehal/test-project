@@ -7,6 +7,9 @@
 //  'mix', pod' -> 'pox mid'
 //  'dog', 'dinner' -> 'dig donner'
 // Assume a and b are length 2 or more.
+
+ const int quantityOfSwappedChars{2};
+
  int main()
  {
     std::string wordOne;
@@ -19,7 +22,7 @@
 
     std::string wordThree{wordOne};
 
-    for ( int i=0; i<=1; ++i)
+    for ( int i=0; i<quantityOfSwappedChars; ++i)
     {
        wordOne[i] = wordTwo[i];
        wordTwo[i] = wordThree[i];
