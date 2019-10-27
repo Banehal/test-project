@@ -1,10 +1,15 @@
  #include <iostream>
  #include <string>
-// Task: B. both_ends
-// Given a string s, return a string made of the first 2
-// and the last 2 chars of the original string,
-// so 'spring' yields 'spng'. However, if the string length
-// is less than 2, return instead the empty string.
+// Task: C. fix_start
+// Given a string s, return a string
+// where all occurences of its first char have
+// been changed to '*', except do not change
+// the first char itself.
+// e.g. 'babble' yields 'ba**le'
+// Assume that the string is length 1 or more.
+// Hint: s.replace(stra, strb) returns a version of string s
+// where all instances of stra have been replaced by strb.
+
 
  int main()
  {
@@ -12,19 +17,26 @@
     std::cout << "Enter first word:" << std::endl;
     std::cin >> wordOne;
 
-      if (wordOne.length() < 2)
-      {
-        std::cout << "Empty string" << std::endl; 
-      }
-      else
-      {
-       char firstChar = wordOne[0];
-       char secondChar = wordOne[1];
-       int wordLength = wordOne.length();
-       char secondLastChar = wordOne[wordLength-2];
-       char lastChar = wordOne[wordLength-1];
-       std::cout << firstChar << secondChar << secondLastChar << lastChar << std::endl; 
-      }
+ //   char firstChar = wordOne[0];
+ //   int wordLength = wordOne.length();
+    for (int i=0; i< wordOne.length(); ++i)
+    {
+       std::cout << wordOne[i];// << std::endl;
+    } 
+       std::cout << std::endl;
+  //    if (wordOne.length() < 2)
+  //   {
+  //      std::cout << "Empty string" << std::endl; 
+  //    }
+  //    else
+  //    {
+  //     char firstChar = wordOne[0];
+  //     char secondChar = wordOne[1];
+  //     int wordLength = wordOne.length();
+  //     char secondLastChar = wordOne[wordLength-2];
+  //     char lastChar = wordOne[wordLength-1];
+  //     std::cout << firstChar << secondChar << secondLastChar << lastChar << std::endl; 
+ //     }
   //  std::string wordTwo;
   //  std::cout << "Enter second word" << std::endl;
   //  std::cin >> wordTwo;
