@@ -1,15 +1,12 @@
  #include <iostream>
  #include <string>
-// Task: C. fix_start
-// Given a string s, return a string
-// where all occurences of its first char have
-// been changed to '*', except do not change
-// the first char itself.
-// e.g. 'babble' yields 'ba**le'
-// Assume that the string is length 1 or more.
-// Hint: s.replace(stra, strb) returns a version of string s
-// where all instances of stra have been replaced by strb.
-
+// Task: D. MixUp
+// Given strings a and b, return a single string with a and b separated
+// by a space '<a> <b>', except swap the first 2 chars of each string.
+// e.g.
+//  'mix', pod' -> 'pox mid'
+//  'dog', 'dinner' -> 'dig donner'
+// Assume a and b are length 2 or more.
 
  int main()
  {
@@ -17,16 +14,27 @@
     std::cout << "Enter first word:" << std::endl;
     std::cin >> wordOne;
 
+    std::string wordTwo;
+    std::cout << "Enter second word:" << std::endl;
+    std::cin >> wordTwo;
+
+    std::string wordThree{wordOne};
+    wordOne[0] = wordTwo[0];
+    wordOne[1] = wordTwo[1];
+    wordTwo[0] = wordThree[0];
+    wordTwo[1] = wordThree[1];
+
+    std::cout << wordOne << " " << wordTwo << std::endl;
    // char firstChar = wordOne[0];
  //   int wordLength = wordOne.length();
-    for (int i=1; i< wordOne.length(); ++i)
-    {
-       if ( wordOne[i] == wordOne[0] )
-       {
-          wordOne[i] = '*';
-       }
-    }
-    std::cout << wordOne << std::endl; 
+  //  for (int i=1; i< wordOne.length(); ++i)
+ //   {
+ //      if ( wordOne[i] == wordOne[0] )
+ //      {
+ //         wordOne[i] = '*';
+ //      }
+ //   }
+ //   std::cout << wordOne << std::endl; 
  //      std::cout << wordOne[i];// << std::endl;
  //   } 
  //      std::cout << std::endl;
